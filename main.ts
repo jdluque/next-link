@@ -38,9 +38,10 @@ export default class MyPlugin extends Plugin {
 		});
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
-			id: 'sample-editor-command',
-			name: 'Sample editor command',
+			id: 'next-link',
+			name: 'Next link',
 			editorCallback: (editor: Editor, view: MarkdownView) => {
+                //let cursorText = editor.getCursor().slice()
                 let cursorText = editor.getLine(editor.getCursor().line).
                     slice(editor.getCursor().ch);
                 const regex = /\[\[[^\]]+\]\]/
@@ -52,7 +53,9 @@ export default class MyPlugin extends Plugin {
                     let text = editor.getLine(currLine).slice(offset);
                     let match_index = text.search(regex);
                     if (match_index > -1) {
-                        editor.setCursor(currLine, match_index + offset + 2);
+                        //editor.setCursor(currLine, match_index + offset + 2);
+                        // TODO: The +1 is a workaround for getting the cursor in the note name; find a solution that puts the cursor on the first character
+                        editor.setCursor(currLine, match_index + offset + 2 + 1);
                         break;
                     }
                     i++;
@@ -81,8 +84,7 @@ export default class MyPlugin extends Plugin {
                     }
                     let match_index = text.search(regex);
                     if (match_index > -1) {
-                        //editor.setCursor(currLine, match_index + offset + 2);
-                        editor.setCursor(currLine, match_index + 2);
+                        editor.setCursor(currLine, match_index + 2 + 1);
                         break;
                     }
                     i++;
