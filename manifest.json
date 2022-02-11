@@ -3,7 +3,7 @@
 	"name": "Next Link",
 	"version": "0.0.1",
 	"minAppVersion": "0.13.23",
-	"description": "This is an Obsidian plugin for fast note link navigation.",
+	"description": "This plugin enables quick jumping between note links.",
 	"author": "Juan Luque",
 	"authorUrl": "https://github.com/jdluque",
 	"isDesktopOnly": true
