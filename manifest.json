@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-next-link",
 	"name": "Next Link",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"minAppVersion": "0.13.23",
 	"description": "Jump quickly between note links.",
 	"author": "Juan Luque",
