@@ -1,9 +1,9 @@
 {
 	"id": "obsidian-next-link",
 	"name": "Next Link",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"minAppVersion": "0.13.23",
-	"description": "This plugin enables quick jumping between note links.",
+	"description": "Jump quickly between note links.",
 	"author": "Juan Luque",
 	"authorUrl": "https://github.com/jdluque",
 	"isDesktopOnly": true
